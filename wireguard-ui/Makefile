@@ -10,14 +10,13 @@ PKG_NAME:=wireguard-ui
 PKG_VERSION:=0.4.0
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE:=wireguard-ui-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/ngoduykhanh/wireguard-ui/tar.gz/v$(PKG_VERSION)?
 PKG_HASH:=75cb1b56892d2076be9a8dab69e4752301da65a5abbd787ab6deaa1ab32b69b4
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILE:=LICENSE
 PKG_MAINTAINER:=gngpp <gngppz@gmail.com>
-
 
 PKG_BUILD_DEPENDS:=golang/host
 PKG_BUILD_PARALLEL:=1
@@ -47,8 +46,7 @@ endef
 
 define Build/Prepare
 	$(call Build/Prepare/Default)
-	$(eval $(call Download,$(PKG_NAME)))
-	$(PKG_BUILD_DIR)/prepare_assets.sh
+	cd $(PKG_BUILD_DIR) && ./prepare_assets.sh
 endef
 
 define Package/$(PKG_NAME)/install
