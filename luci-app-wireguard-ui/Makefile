@@ -10,7 +10,7 @@ PKG_VERSION:=1.0.8
 PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI support for wireguard-ui
-LUCI_DEPENDS:=+wireguard-ui +luci-compat
+LUCI_DEPENDS:=+wireguard-ui +wg-quick +luci-compat
 
 define Package/$(PKG_NAME)/conffiles
 /etc/wireguard-ui
