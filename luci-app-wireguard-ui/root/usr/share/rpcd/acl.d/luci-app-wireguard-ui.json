@@ -1,0 +1,11 @@
+{
+	"luci-app-wireguard-ui": {
+		"description": "Grant UCI access for luci-app-wireguard-ui",
+		"read": {
+			"uci": [ "wireguard-ui" ]
+		},
+		"write": {
+			"uci": [ "wireguard-ui" ]
+		}
+	}
+}

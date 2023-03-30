@@ -1,0 +1,71 @@
+msgid "WireGuard web interface"
+msgstr "WireGuard Web 图形管理"
+
+msgid "Running state"
+msgstr "运行状态"
+
+msgid "Open Web Interface"
+msgstr "打开 Web 界面"
+
+msgid "A web user interface to manage your WireGuard setup."
+msgstr "用于管理 WireGuard 设置的 Web 用户界面。"
+
+msgid "Basic Setting"
+msgstr "基本设置"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "Enable SSL"
+msgstr "启用 SSL"
+
+msgid "SSL cert"
+msgstr "SSL 证书"
+
+msgid "SSL certificate file path"
+msgstr "SSL 证书文件路径"
+
+msgid "SSL key"
+msgstr "SSL 密钥"
+
+msgid "SSL key file path"
+msgstr "SSL 密钥文件路径"
+
+msgid "Cache directory"
+msgstr "缓存目录"
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "Collecting data..."
+msgstr "收集数据..."
+
+msgid "NAS"
+msgstr "网络存储"
+
+msgid "User Manual"
+msgstr "用户手册"
+
+msgid "Enable Logs"
+msgstr "启用日志"
+
+msgid "Clear logs"
+msgstr "清空日志"
+
+msgid "View Password"
+msgstr "查看密码"
+
+msgid "Username:"
+msgstr "用户名："
+
+msgid "Password:"
+msgstr "密码："
+
+msgid "Reading..."
+msgstr "读取中..."
+
+msgid "Read"
+msgstr "读取"

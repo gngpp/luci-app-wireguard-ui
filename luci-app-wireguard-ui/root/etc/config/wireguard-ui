@@ -1,0 +1,7 @@
+config wireguard-ui
+	option 'enabled' '0'
+	option 'port' '5244'
+	option 'temp_dir' '/tmp/wireguard-ui'
+	option 'ssl' '0'
+	option 'token_expires_in' '48'
+	option 'max_connections' '0'
