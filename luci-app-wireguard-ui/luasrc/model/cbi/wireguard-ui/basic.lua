@@ -1,6 +1,6 @@
 local m, s
 
-m = Map("wireguard-ui", translate("wireguard-ui"), translate("A file list program that supports multiple storage.") .. "<br/>" .. [[<a href="https://wireguard-ui.nn.ci/zh/guide/drivers/local.html" target="_blank">]] .. translate("User Manual") .. [[</a>]])
+m = Map("wireguard-ui", translate("wireguard-ui"), translate("A web user interface to manage your WireGuard setup.") .. "<br/>" .. [[<a href="https://wireguard-ui.nn.ci/zh/guide/drivers/local.html" target="_blank">]] .. translate("User Manual") .. [[</a>]])
 
 m:section(SimpleSection).template  = "wireguard-ui/wireguard-ui_status"
 
@@ -15,41 +15,21 @@ o = s:option(Value, "port", translate("Port"))
 o.datatype = "and(port,min(1))"
 o.rmempty = false
 
-o = s:option(Flag, "log", translate("Enable Logs"))
-o.default = 1
+o = s:option(Flag, "username", translate("Username"))
+o.default = admin
 o.rmempty = false
 
-o = s:option(Flag, "ssl", translate("Enable SSL"))
+o = s:option(Flag, "password", translate("Password"))
+o.default = admin
 o.rmempty=false
 
-o = s:option(Value,"ssl_cert", translate("SSL cert"), translate("SSL certificate file path"))
-o.datatype = "file"
-o:depends("ssl", "1")
-
-o = s:option(Value,"ssl_key", translate("SSL key"), translate("SSL key file path"))
-o.datatype = "file"
-o:depends("ssl", "1")
-
-o = s:option(Flag, "allow_wan", translate("Allow Access From Internet"))
+o = s:option(Flag, "smtp-hostname", translate("SMTP Hostname"))
 o.rmempty = false
 
-o = s:option(Value, "max_connections", translate("Max Connections"), translate("0 is unlimited, It is recommend to set a low number of concurrency (10-20) for poor performance device"))
-o.datatype = "and(uinteger,min(0))"
-o.default = "0"
-o.rmempty = false
+o = s:option(Flag, "smtp-username", translate("SMTP Username"))
+o.rmempty=false
 
-o = s:option(Value, "token_expires_in", translate("Login Validity Period (hours)"))
-o.datatype = "and(uinteger,min(0))"
-o.default = "48"
-o.rmempty = false
-
-o = s:option(Value, "temp_dir", translate("Cache directory"))
-o.datatype = "string"
-o.default = "/tmp/wireguard-ui"
-o.rmempty = false
-
-o = s:option(Button, "admin_info", translate("View Password"))
-o.rawhtml = true
-o.template = "wireguard-ui/admin_info"
+o = s:option(Flag, "smtp-password", translate("SMTP Password"))
+o.rmempty=false
 
 return m
