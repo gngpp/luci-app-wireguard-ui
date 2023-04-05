@@ -1,5 +1,5 @@
 # luci-app-wireguard-ui
-Wireguard UI for OpenWrt
+Wireguard UI for OpenWrt (还没有写完测试，请不要编译)
 
 ## How to build
 
